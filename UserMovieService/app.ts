@@ -96,3 +96,5 @@ app.route('/users').get(async (req, res) => {
 		console.log(error);
 	}
 });
+
+export default app;

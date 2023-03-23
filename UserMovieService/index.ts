@@ -1,13 +1,13 @@
-const http = require('http');
+import http from 'http';
 
-const app = require('./app');
+import app from './app';
 
 const server = http.createServer(app);
 
-const route = require('./app');
+// const route = require('./app');
 
 const port = process.env.PORT || 3550;
 
 server.listen(port, () => {
-	console.log(`Server running on port ${port}`);
+	console.log(`⚡️[server]: Server is running at http://localhost:${port}`);
 });
