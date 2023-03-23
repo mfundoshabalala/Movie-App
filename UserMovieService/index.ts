@@ -4,7 +4,7 @@ import app from './app';
 
 const server = http.createServer(app);
 
-// const route = require('./app');
+const route = require('./app');
 
 const port = process.env.PORT || 3550;
 

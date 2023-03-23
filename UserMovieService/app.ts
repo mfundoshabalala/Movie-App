@@ -16,7 +16,7 @@ const Movie = require('./models/movie');
 // const { log } = require('console');
 
 app.get('/', async (req: Request, res: Response) => {
-	res.send("App is running");
+	res.send('Express + TypeScript Server');
 });
 
 app.post('/movie', async (req: Request, res: Response) => {
