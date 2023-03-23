@@ -2,10 +2,10 @@ require('dotenv').config();
 require('./configs/database').connect();
 
 
-const express = require('express');
+import express, { Express, Request, Response } from 'express';
 const jwt = require('jsonwebtoken');
 
-const app = express();
+const app: Express = express();
 
 app.use(express.json());
 
@@ -15,7 +15,11 @@ const User = require('./models/user');
 const Movie = require('./models/movie');
 // const { log } = require('console');
 
-app.post('/movie', async (req, res) => {
+app.get('/', async (req: Request, res: Response) => {
+	res.send("App is running");
+});
+
+app.post('/movie', async (req: Request, res: Response) => {
 	try {
 		const { movieId, movieName, yearReleased } = req.body;
 		if (!(movieId && movieName && yearReleased)) {
